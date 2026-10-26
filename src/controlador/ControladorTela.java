@@ -6,8 +6,8 @@ package controlador;
 
 import java.awt.Dimension;
 import javax.swing.JDesktopPane;
-import view.TelaCadastro;
-import view.TelaConsulta;
+import view.TelaDeCadastro;
+import view.TelaDeConsulta;
 
 /**
  *
@@ -20,27 +20,22 @@ public class ControladorTela {
         this.jDesktop = jDesktop;
     }
     
-    public void abrirTelaInicial(){
-        jDesktop.removeAll();
-        jDesktop.updateUI();
-    }
-    
-    public void abrirTelaCadastro(){
+    public void abrirTelaDeCadastro(){
         jDesktop.removeAll();
         jDesktop.updateUI();
         Dimension resolucao = jDesktop.getSize();
-        TelaCadastro tela1 = new TelaCadastro();
+        TelaDeCadastro tela1 = new TelaDeCadastro();
         tela1.setSize(resolucao);
         tela1.setLocation(0, 0);
         jDesktop.add(tela1);
         tela1.setVisible(true);
     }
     
-    public void abrirTelaConsulta(){
+    public void abrirTelaDeConsulta(){
         jDesktop.removeAll();
         jDesktop.updateUI();
         Dimension resolucao = jDesktop.getSize();
-        TelaConsulta tela2 = new TelaConsulta();
+        TelaDeConsulta tela2 = new TelaDeConsulta();
         tela2.setSize(resolucao);
         tela2.setLocation(0, 0);
         jDesktop.add(tela2);
